@@ -2,18 +2,22 @@ const variables = {
 	z_indexes: ["modals", "header", "element", "content"],
 
 	colors: {
-		primary: "#fff",
-
 		black: "#000",
 		white: "#fff",
 
-		neutral: {
-			100: "#1d242b",
-			200: "#313D49",
-			300: "#5A636D",
-			400: "#8C9197",
-			500: "#BCC2C8",
-			600: "#F3f4f7",
+		gray: {
+			100: "#F2F7FF",
+			200: "#F5F5FA",
+			300: "##E9E9F0",
+			400: "#5D5D6C",
+			500: "#737380",
+		},
+
+		primary: {
+			green: "#1B9847",
+			greenLight: "#46AB6A",
+			purple: "#A112DF",
+			red: "#DE3838",
 		},
 	},
 

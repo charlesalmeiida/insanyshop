@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 		outline: 0;
 		font-weight: normal;
 		font-size: 1.6rem;
+		font-family: "Inter", sans-serif;
 	}
 
 	button {

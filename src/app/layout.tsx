@@ -1,19 +1,20 @@
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "../lib/registry";
 import { Viewport } from "next";
+import { Header } from "@/ui/core";
 
 const inter = Inter({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--inter",
-	weight: ["400", "500", "600", "700", "800"],
+	weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export async function generateMetadata() {
 	return {
 		metadataBase: new URL("https://insanydesign.com/"),
 		title: {
-			default: "template-insany",
+			default: "Insanyshop",
 			template: `%s - insany`,
 		},
 
@@ -117,7 +118,11 @@ export default async function RootLayout({
 	return (
 		<html lang="pt-br">
 			<body className={`${inter.variable}`}>
-				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+				<StyledComponentsRegistry>
+					<Header />
+
+					{children}
+				</StyledComponentsRegistry>
 			</body>
 		</html>
 	);
