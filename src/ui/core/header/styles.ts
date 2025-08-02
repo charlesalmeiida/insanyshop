@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const Header = styled.header`
 	background: ${variables.colors.white};
+	height: 8rem;
 `;
 
 export const HeaderContainer = styled.div`

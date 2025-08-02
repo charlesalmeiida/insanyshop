@@ -7,6 +7,10 @@ const nextConfig = {
 		ignoreDuringBuilds: true,
 	},
 
+	images: {
+		domains: ['images.unsplash.com'],
+  },
+
 	compress: true,
 	compiler: {
 		styledComponents: true,

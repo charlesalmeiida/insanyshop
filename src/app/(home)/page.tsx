@@ -1,10 +1,13 @@
-import { Button } from "@/ui/components/button";
 import { NextPage } from "next";
+import { AllProducts } from "./components/all-products";
 
-const Home: NextPage = () => {
+const Home: NextPage = async () => {
+	const data = await fetch("https://api.insany.co/api/products");
+	const result = await data.json();
+
 	return (
 		<main>
-			<Button />
+			<AllProducts products={result.products} />
 		</main>
 	);
 };

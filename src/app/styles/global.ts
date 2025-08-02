@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
 	html,
 	body {
 		overflow-x: hidden;
+		background: #F3F7FF;
 	}
 
 	html {
