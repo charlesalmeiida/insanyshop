@@ -4,6 +4,7 @@ import React from "react";
 
 import * as S from "./styles";
 import { CardItem } from "@/ui/components/card-item";
+import { FilterCategory, Filters } from "@/ui/components/filters";
 
 export type CardItemProps = {
 	id: number;
@@ -18,12 +19,15 @@ export type CardItemProps = {
 
 interface AllProductsProps {
 	products: CardItemProps[];
+	categories: FilterCategory[];
 }
 
-export const AllProducts = ({ products }: AllProductsProps) => {
+export const AllProducts = ({ products, categories }: AllProductsProps) => {
 	return (
 		<S.Section>
 			<S.SectionContainer>
+				<Filters categories={categories} />
+
 				<S.SectionHeading>Todos os produtos</S.SectionHeading>
 
 				<S.SectionList>
