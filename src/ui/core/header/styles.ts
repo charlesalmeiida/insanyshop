@@ -1,5 +1,6 @@
 import { Container, Heading } from "@/app/styles/patterns";
 import variables from "@/app/styles/variables";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -14,7 +15,7 @@ export const HeaderContainer = styled.div`
 	justify-content: space-between;
 `;
 
-export const HeaderLogo = styled.a`
+export const HeaderLogo = styled(Link)`
 	${Heading[40]}
 	color: #5D5D6D;
 `;

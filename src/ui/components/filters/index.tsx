@@ -9,25 +9,33 @@ interface FilterProps {
 }
 
 export function Filters({ categories }: FilterProps) {
-	const [filter, setFilter] = React.useState("");
-
-	const handleChangeFilter = (
-		event: React.ChangeEvent<HTMLSelectElement>,
-	) => {
-		setFilter(event.target.value);
-
-		console.log(filter);
-	};
+	const organizeItems = [
+		"Novidades",
+		"Preço: Maior - menor",
+		"Preço: Menor - maior",
+		"Mais vendidos",
+	];
 
 	return (
 		<S.HolderFilters>
-			<S.SelectCategory name="categoria" onChange={handleChangeFilter}>
+			<S.SelectCategory name="categoria">
 				<option value="categoria" disabled>
 					Selecione a categoria
 				</option>
 				{categories.map((category) => (
 					<option key={category.id} value={category.id}>
 						{category.name}
+					</option>
+				))}
+			</S.SelectCategory>
+
+			<S.SelectCategory name="categoria">
+				<option value="categoria" disabled>
+					Organizar por
+				</option>
+				{organizeItems.map((item) => (
+					<option key={item} value={item}>
+						{item}
 					</option>
 				))}
 			</S.SelectCategory>

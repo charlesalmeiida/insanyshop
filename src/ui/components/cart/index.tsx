@@ -3,8 +3,11 @@
 import React from "react";
 
 import * as S from "./styles";
+import { useCart } from "@/store/add-to-cart";
 
 const Cart = () => {
+	const { cart } = useCart();
+
 	return (
 		<S.CartButton>
 			<svg
@@ -22,8 +25,8 @@ const Cart = () => {
 					strokeLinejoin="round"
 				/>
 				<path
-					fill-rule="evenodd"
-					clip-rule="evenodd"
+					fillRule="evenodd"
+					clipRule="evenodd"
 					d="M20 7H4C3.44772 7 3 7.44772 3 8V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V8C21 7.44772 20.5523 7 20 7Z"
 					stroke="#737380"
 					strokeWidth="1.5"
@@ -39,7 +42,7 @@ const Cart = () => {
 				/>
 			</svg>
 
-			<span>2</span>
+			{cart.length > 0 && <span>{cart.length}</span>}
 		</S.CartButton>
 	);
 };

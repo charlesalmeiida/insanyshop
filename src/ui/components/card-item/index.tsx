@@ -7,7 +7,7 @@ import iconStar from "@/assets/icons/icon-star.svg";
 import * as S from "./styles";
 import Image from "next/image";
 import { Button } from "../button";
-import { Item } from "@/types/item";
+import { Item } from "@/types";
 
 export function CardItem({
 	price,
@@ -17,9 +17,21 @@ export function CardItem({
 	name,
 	description,
 	image,
+	id,
 }: Item) {
+	const products = {
+		price,
+		category,
+		rating,
+		stock,
+		name,
+		description,
+		image,
+		id,
+	};
+
 	return (
-		<S.HolderCard>
+		<S.HolderCard href={`/produto/${id}`}>
 			<S.HolderCardImage>
 				<Image
 					src={image}
@@ -58,7 +70,7 @@ export function CardItem({
 					<S.ProductStock>{stock} em estoque</S.ProductStock>
 				</S.HolderPrice>
 
-				<Button />
+				<Button {...products} />
 			</S.HolderCardContent>
 		</S.HolderCard>
 	);

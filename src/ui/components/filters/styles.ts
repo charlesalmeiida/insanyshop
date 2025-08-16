@@ -6,6 +6,17 @@ export const HolderFilters = styled.div`
 	margin-bottom: 4.8rem;
 `;
 
-export const SelectCategory = styled.select``;
+export const SelectCategory = styled.select`
+	background: transparent;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	font-size: 1.4rem;
+	color: #737380;
+	line-height: 22px;
+`;
 
 export const SelectType = styled.select``;

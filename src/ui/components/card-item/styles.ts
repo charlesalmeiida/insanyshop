@@ -1,14 +1,17 @@
 import { flex } from "@/app/styles/mixins";
 import { Text } from "@/app/styles/patterns";
 import variables from "@/app/styles/variables";
+import Link from "next/link";
 import styled from "styled-components";
 
-export const HolderCard = styled.div`
+export const HolderCard = styled(Link)`
+	all: unset;
 	border-radius: 1.9rem;
 	border: 1px solid #ddd;
 	background: #fff;
 	box-shadow: -6px 8px 20.4px 0 rgba(0, 0, 0, 0.04);
 	width: 100%;
+	cursor: pointer;
 	max-width: 35.6rem;
 `;
 

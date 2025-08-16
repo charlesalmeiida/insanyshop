@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { AllProducts } from "./components/all-products";
 import Categories from "./components/categories";
+import Pagination from "./components/pagination";
 
 const Home: NextPage = async () => {
 	const data = await fetch("https://api.insany.co/api/products");
@@ -15,6 +16,8 @@ const Home: NextPage = async () => {
 				products={result.products}
 				categories={resultCategory.categories}
 			/>
+
+			<Pagination />
 
 			<Categories categories={resultCategory.categories} />
 		</main>

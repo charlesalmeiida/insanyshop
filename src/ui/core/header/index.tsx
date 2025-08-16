@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 	return (
 		<S.Header>
 			<S.HeaderContainer>
-				<S.HeaderLogo href="/">InsanyShop</S.HeaderLogo>
+				<S.HeaderLogo href={"/"}>InsanyShop</S.HeaderLogo>
 
 				<S.HeaderNav>
 					<InputSearch />
