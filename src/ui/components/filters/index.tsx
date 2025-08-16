@@ -1,18 +1,11 @@
 "use client";
 
+import { Category } from "@/types";
 import * as S from "./styles";
 import React from "react";
 
-export type FilterCategory = {
-	id: string;
-	name: string;
-	description: string;
-	icon: string;
-	productCount: number;
-};
-
 interface FilterProps {
-	categories: FilterCategory[];
+	categories: Category[];
 }
 
 export function Filters({ categories }: FilterProps) {

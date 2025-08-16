@@ -7,17 +7,7 @@ import iconStar from "@/assets/icons/icon-star.svg";
 import * as S from "./styles";
 import Image from "next/image";
 import { Button } from "../button";
-
-interface CardItemProps {
-	price: number;
-	category: string;
-	rating: number;
-	stock: number;
-	id: number;
-	name: string;
-	description: string;
-	image: string;
-}
+import { Item } from "@/types/item";
 
 export function CardItem({
 	price,
@@ -27,7 +17,7 @@ export function CardItem({
 	name,
 	description,
 	image,
-}: CardItemProps) {
+}: Item) {
 	return (
 		<S.HolderCard>
 			<S.HolderCardImage>

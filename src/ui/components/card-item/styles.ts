@@ -15,6 +15,7 @@ export const HolderCard = styled.div`
 export const HolderCardImage = styled.div`
 	width: 100%;
 	max-width: 35.6rem;
+	max-height: 27rem;
 	overflow: hidden;
 	border-radius: 1.9rem 1.9rem 0 0;
 

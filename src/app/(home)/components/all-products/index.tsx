@@ -4,22 +4,13 @@ import React from "react";
 
 import * as S from "./styles";
 import { CardItem } from "@/ui/components/card-item";
-import { FilterCategory, Filters } from "@/ui/components/filters";
-
-export type CardItemProps = {
-	id: number;
-	name: string;
-	description: string;
-	image: string;
-	category: string;
-	stock: number;
-	rating: number;
-	price: number;
-};
+import { Filters } from "@/ui/components/filters";
+import { Item } from "@/types";
+import { Category } from "@/types";
 
 interface AllProductsProps {
-	products: CardItemProps[];
-	categories: FilterCategory[];
+	products: Item[];
+	categories: Category[];
 }
 
 export const AllProducts = ({ products, categories }: AllProductsProps) => {

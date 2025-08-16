@@ -1,10 +1,10 @@
 "use client";
 
-import { FilterCategory } from "@/ui/components/filters";
+import { Category } from "@/types";
 import * as S from "./styles";
 
 interface CategoriesProps {
-	categories: FilterCategory[];
+	categories: Category[];
 }
 
 export default function Categories({ categories }: CategoriesProps) {
