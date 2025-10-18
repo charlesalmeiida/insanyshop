@@ -13,7 +13,7 @@ export default async function Product({
 	const product = result.product as Item;
 
 	if (!product) {
-		return <h1>Product not found</h1>;
+		return <h1>Produto não encontrado</h1>;
 	}
 
 	return <ProductDetails {...product} />;

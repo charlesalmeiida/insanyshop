@@ -8,16 +8,6 @@ export const Section = styled.section`
 
 export const SectionContainer = styled.div`
 	${Container};
-
-	.back-button {
-		display: flex;
-		align-items: center;
-		gap: 0.8rem;
-		color: #617480;
-		font-size: 1.4rem;
-		font-weight: 500;
-		line-height: 150%;
-	}
 `;
 
 export const SectionProduct = styled.div`

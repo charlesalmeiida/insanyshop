@@ -25,3 +25,5 @@ export const HeaderSearchInput = styled.input`
 		line-height: 22px;
 	}
 `;
+
+export const HeaderSearchButton = styled.button``;
